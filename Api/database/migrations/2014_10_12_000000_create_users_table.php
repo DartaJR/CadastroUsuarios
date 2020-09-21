@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->bigInteger('cpf');
+            $table->bigInteger('cpf')->unique();
             $table->date('data_nascimento');
             $table->string('telefones');
             $table->string('endereco');

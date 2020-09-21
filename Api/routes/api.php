@@ -13,11 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('auth/login', 'Api\AuthController@login');
-Route::post('auth/refresh', 'Api\AuthController@refresh');
-Route::post('auth/logout', 'Api\AuthController@logout');
+Route::post('login', 'UserController@login');
+Route::post('register', 'UserController@register');
+Route::post('refresh', 'UserController@refresh');
+Route::post('logout', 'UserController@logout');
+Route::get('users', 'UserController@index');
+Route::get('users/{id}', 'UserController@show');
+Route::put('users/{id}', 'UserController@update');
+Route::delete('users/{id}', 'UserController@delete');
 
 Route::group(['middleware' => 'jwt.auth', 'namespace' => 'Api\\'], function() {
 
-    Route::get('auth/me', 'AuthController@me');
+    Route::get('me', 'UserController@me');
 });
