@@ -18,7 +18,7 @@ export class AuthService {
   }
 
   login(credentials: { email: string, password: string }): Observable<boolean> {
-    return this.http.post<any>(`${environment.api_url}/login`, credentials)
+    return this.http.post<any>(`${environment.api_url}/auth/login`, credentials)
       .do(data => {
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', btoa(JSON.stringify(data.user)));
@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   logout(): void {
-    this.http.get(`${environment.api_url}/logout`).subscribe(resp => {
+    this.http.get(`${environment.api_url}/auth/logout`).subscribe(resp => {
       console.log(resp);
       localStorage.clear();
       this.router.navigate(['auth/login']);
@@ -38,7 +38,7 @@ export class AuthService {
   }
 
   setUser(): Promise<boolean> {
-    return this.http.get<any>(`${environment.api_url}/me`).toPromise()
+    return this.http.get<any>(`${environment.api_url}/auth/me`).toPromise()
       .then(data => {
         if (data.user) {
           localStorage.setItem('user', btoa(JSON.stringify(data.user)));
