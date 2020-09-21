@@ -11,6 +11,9 @@ import { User } from '../interfaces/user.model';
 @Injectable()
 export class AuthService {
 
+  users: User[]
+  editUser: User
+
   constructor(private http: HttpClient, private router: Router) { }
 
   check(): boolean {
@@ -18,7 +21,7 @@ export class AuthService {
   }
 
   login(credentials: { email: string, password: string }): Observable<boolean> {
-    return this.http.post<any>(`${environment.api_url}/auth/login`, credentials)
+    return this.http.post<any>(`${environment.api_url}/login`, credentials)
       .do(data => {
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', btoa(JSON.stringify(data.user)));
@@ -26,7 +29,7 @@ export class AuthService {
   }
 
   logout(): void {
-    this.http.get(`${environment.api_url}/auth/logout`).subscribe(resp => {
+    this.http.get(`${environment.api_url}/logout`).subscribe(resp => {
       console.log(resp);
       localStorage.clear();
       this.router.navigate(['auth/login']);
@@ -38,7 +41,7 @@ export class AuthService {
   }
 
   setUser(): Promise<boolean> {
-    return this.http.get<any>(`${environment.api_url}/auth/me`).toPromise()
+    return this.http.get<any>(`${environment.api_url}/me`).toPromise()
       .then(data => {
         if (data.user) {
           localStorage.setItem('user', btoa(JSON.stringify(data.user)));
@@ -48,4 +51,10 @@ export class AuthService {
       });
   }
 
+  getAllUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${environment.api_url}/users`);
+  }
+  getUsers (): void {
+    this.getAllUsers().subscribe(users => (this.users = users))
+  }
 }

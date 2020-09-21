@@ -7,6 +7,7 @@ import { } from 'jqueryui';
 import { } from 'daterangepicker';
 import { } from 'jquery.slimscroll';
 import * as moment from 'moment';
+import {AuthService} from "../../auth/services/auth.service";
 // Variable in assets/js/scripts.js file
 declare var AdminLTE: any;
 
@@ -22,7 +23,7 @@ export class AdminDashboard1Component implements OnInit {
   knob: JQuery;
   calendar: JQuery;
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
   ngOnInit() {
      // Update the AdminLTE layouts
     AdminLTE.init();
