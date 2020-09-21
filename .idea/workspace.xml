@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36fc9df9-f475-43af-89bc-2381df8435f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CadastroUsuarios.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CadastroUsuarios.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Api/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Api/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Api/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Api/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +115,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Api" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="C:\Users\D'Artagnan\PhpstormProjects\CadastroUsuarios\Front\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -138,18 +136,34 @@
       <option name="presentableId" value="Default" />
       <updated>1600631715304</updated>
       <workItem from="1600631716535" duration="8345000" />
-      <workItem from="1600662652977" duration="1204000" />
+      <workItem from="1600662652977" duration="3280000" />
     </task>
+    <task id="LOCAL-00001" summary="Completada a Api com validações e metodos necessários para desenvolver o front">
+      <created>1600663931096</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600663931096</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Completada a Api com validações e metodos necessários para desenvolver o front" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completada a Api com validações e metodos necessários para desenvolver o front" />
   </component>
   <component name="WindowStateProjectService">
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600663066953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1600663066953" />
+    <state x="371" y="0" key="CommitChangelistDialog2" timestamp="1600663930257">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="371" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600663930257" />
     <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1600639597536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -158,6 +172,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="630" y="314" width="276" height="251" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1600639685108" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1600665958611">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600665958611" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1600663935875">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600663935875" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600637436975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
