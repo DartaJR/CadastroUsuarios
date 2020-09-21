@@ -10,10 +10,9 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 
 class UserController extends Controller
-{
-    /**
-     * @var JWTAuth
-     */
+{  /**
+ * @var JWTAuth
+ */
     private $jwtAuth;
 
     public function __construct(JWTAuth $jwtAuth)
@@ -29,7 +28,9 @@ class UserController extends Controller
             return response()->json(['error' => 'invalid_credentials'], 401);
         }
 
-        return response()->json(compact('token'));
+        $user = $this->jwtAuth->authenticate($token);
+
+        return response()->json(compact('token', 'user'));
     }
 
     public function refresh()
